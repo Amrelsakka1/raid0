@@ -19,6 +19,13 @@
 
   <!-- Performance API Polyfills -->
   <script>
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.href = "phone.html";
+  }
+</script>
+
+  <script>
   (function () {
     var noop = function noop() {};
     if ("performance" in window === false) {
